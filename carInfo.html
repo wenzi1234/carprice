@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>车辆信息</title>
+    <link rel="stylesheet" href="assets/agile/css/agile.layout.css">
+    <link rel="stylesheet" href="assets/third/seedsui/plugin/seedsui/seedsui.min.css">
+</head>
+<body>
+<div id="section_container">
+    <section id="login-section" data-role="section" class="active">
+        <header>
+
+            <div class="titlebar">
+                <a data-toggle="back" href="#">
+                    <i class="icon icon-arrowleft"></i>
+                </a>
+                <h1 style="text-align: center">车辆信息</h1>
+            </div>
+
+        </header>
+
+        <article id="main_article" data-role="article" class="active">
+            <form id="form1">
+                <div class="group">
+                    <div class="row">
+                        <label class="row-left">代理人</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <input type="text" placeholder="代理人" name="username" data-rule-field="代理人" data-rule="username"/>
+                            <i class="icon icon-clear-fill color-placeholder"></i>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">车主姓名</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <input type="text" placeholder="车主姓名" name="carownername" data-rule-field="车主姓名" data-rule="carownername"/>
+                            <i class="icon icon-clear-fill color-placeholder"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="row-left">证件类型</label>
+                        <div class="row-right input-box" data-input="clear">
+
+
+                            <select name="selectType">
+                                <option value="SFZ">身份证</option>
+                                <option value="HZ">护照</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">证件号码</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <input type="text" placeholder="证件号码" name="credentnum" data-rule-field="证件号码" data-rule="credentnum"/>
+                            <i class="icon icon-camera color-placeholder"></i>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">注册日期</label>
+                        <div class="row-right input-box">
+                            <input type="date" name="birthday" placeholder="注册日期"/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">车型名称</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <input type="text" placeholder="车型名称" name="carbrandname" data-rule-field="车型名称" data-rule="carbrandname"/>
+                            <i class="icon icon-clear-fill color-placeholder"></i>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">配置型号</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <input type="text" placeholder="配置型号" name="deployNum" data-rule-field="配置型号" data-rule="deployNum"/>
+                            <i class="icon icon-clear-fill color-placeholder"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="row-left">打印车型</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <input type="text" placeholder="打印车型" name="car1" data-rule-field="打印车型" data-rule="car1"/>
+                            <i class="icon icon-clear-fill color-placeholder"></i>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">新车购置价</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <input type="text" placeholder="新车购置价" name="car2" data-rule-field="新车购置价" data-rule="car2"/>
+                            <i class="icon icon-clear-fill color-placeholder"></i>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">车牌号码</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <input type="text" placeholder="车牌号码" name="car3" data-rule-field="车牌号码" data-rule="car3"/>
+                            <i class="icon icon-camera color-placeholder"></i>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">发动机号码</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <input type="text" placeholder="发动机号码" name="car4" data-rule-field="发动机号码" data-rule="car4"/>
+                            <i class="icon icon-camera color-placeholder"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="row-left">车架号</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <input type="text" placeholder="车架号" name="car5" data-rule-field="车架号" data-rule="car5"/>
+                            <i class="icon icon-clear-fill color-placeholder"></i>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">车辆类型</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select name="carmodeltype">
+                                <option value="c1">轿车</option>
+                                <option value="c2">卡车</option>
+                                <option value="c3">铲车</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <button type="button" class="submit block" id="submit">
+                    <a href="insuranceCategery.html">下一步</a>
+                </button>
+
+            </form>
+
+
+
+        </article>
+    </section>
+
+</div>
+<!--- third -->
+<script src="assets/third/jquery/jquery-2.1.3.min.js"></script>
+<script src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
+<!---  agile -->
+<script type="text/javascript" src="assets/agile/js/agile.js"></script>
+<script type="text/javascript" src="assets/bridge/exmobi.js"></script>
+<script type="text/javascript" src="assets/bridge/agile.exmobi.js"></script>
+<!-- app -->
+<script type="text/javascript" src="assets/app/js/app.seedsui.js"></script>
+<script type="text/javascript" src="assets/third/seedsui/plugin/seedsui/seedsui.min.js"></script>
+<script>
+
+ /* 暂时注释
+    window.addEventListener("load",function(){
+
+        var f = new Form("#form1");
+        var a = new Alert();
+        $('#submit').on(A.options.clickEvent,function(){
+            var args=f.serialize();
+            a.setText("你所要提交的参数是："+args);
+            a.show();
+        });
+
+    },false);
+*/
+
+</script>
+</body>
+</html>
