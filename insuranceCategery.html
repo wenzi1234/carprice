@@ -1,10 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>车辆信息</title>
+    <link rel="stylesheet" href="assets/agile/css/agile.layout.css">
+    <link rel="stylesheet" href="assets/third/seedsui/plugin/seedsui/seedsui.min.css">
+
+    <link rel="stylesheet" href="assets/third/flat/flat.component.css">
+    <link rel="stylesheet" href="assets/third/flat/flat.color.css">
+    <link rel="stylesheet" href="assets/third/flat/iconline.css">
+    <link rel="stylesheet" href="assets/app/css/app.css">
 </head>
 <body>
+<div id="section_container">
+    <section id="login-section" data-role="section" class="active">
+        <header>
+
+            <!--<div class="titlebar">-->
+                <!--<a data-toggle="back" href="#">-->
+                    <!--<i class="icon icon-arrowleft"></i>-->
+                <!--</a>-->
+                <!--<h1 style="text-align: center">车辆信息</h1>-->
+            <!--</div>-->
+
+            <div class="titlebar">
+                <a data-toggle="back" href="#">
+                    <i class="icon icon-arrowleft"></i>
+                </a>
+                <h1 style="text-align: center">车辆信息</h1>
+            </div>
+
+        </header>
+
+        <article id="main_article" data-role="article" class="active">
+            <form id="form1">
+
+
+                <div class="group">
+                    <div class="row">
+                        <label class="row-left">商业险</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">车辆损失险</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">第三方责任险</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">司机座位险</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">车上乘客责任险</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="row-left">全车盗抢险</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">玻璃单独破碎险</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">自然损失险</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">车身划痕险</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">无法做到第三方险</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">车辆损失险(不计免赔)</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="row-left">第三方责任险(不计免赔)</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">第三者责任险(不计免赔)</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">司机座位险(不计免赔)</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">全车盗抢(不计免赔)</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="row-left">交强险</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">车船税</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <select class="icon-download-fill" name="s1" style="background-color: #BDC3C7;width: 80px">
+                                <option style="width: 80px">10万</option>
+                                <option style="width: 80px">20万</option>
+                            </select>
+
+                            <i class="icon-hook-fill" style="width: 30px;text-align: center"></i>
+                            <div style="text-align: center;width: 50px;">保费</div>
+                            <div style="text-align: center" class="toggle ios notext" data-role="toggle" data-on="是" data-on-value="1" data-off="否" data-off-value="0"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">总保费合计</label>
+                        <div class="row-right input-box" data-input="clear">
+
+                            <div style="text-align: center;width: 50px;">100</div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="row-left">起止日期</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <div class="row-right input-box">
+                                <input type="date" name="startdate" placeholder="起期"/>
+                            </div>
+                            <div class="row-right input-box">
+                                <input type="date" name="enddate" placeholder="止期"/>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <label class="row-left">起止日期</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <div class="row-right input-box">
+                                <input type="date" name="startdate" placeholder="起期"/>
+                            </div>
+                            <div class="row-right input-box">
+                                <input type="date" name="enddate" placeholder="止期"/>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <label class="row-left">预约时间</label>
+                        <div class="row-right input-box" data-input="clear">
+                            <div class="row-right input-box">
+                                <input type="date" name="startdate" placeholder="预约时间"/>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+                <button type="button" class="submit block" id="submit">
+                    <a href="insuranceCategery.html">下一步</a>
+                </button>
+
+            </form>
+
+
+
+        </article>
+    </section>
+
+  </div>
+<!--- third -->
+<script src="assets/third/jquery/jquery-2.1.3.min.js"></script>
+<script src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
+<!---  agile -->
+<script type="text/javascript" src="assets/agile/js/agile.js"></script>
+<script type="text/javascript" src="assets/bridge/exmobi.js"></script>
+<script type="text/javascript" src="assets/bridge/agile.exmobi.js"></script>
+<!-- app -->
+<script type="text/javascript" src="assets/app/js/app.seedsui.js"></script>
+<script type="text/javascript" src="assets/third/seedsui/plugin/seedsui/seedsui.min.js"></script>
+<script>
+
+    /* 暂时注释
+     window.addEventListener("load",function(){
+
+     var f = new Form("#form1");
+     var a = new Alert();
+     $('#submit').on(A.options.clickEvent,function(){
+     var args=f.serialize();
+     a.setText("你所要提交的参数是："+args);
+     a.show();
+     });
+
+     },false);
+     */
+
+</script>
 
 </body>
 </html>
