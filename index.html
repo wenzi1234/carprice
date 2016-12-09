@@ -21,6 +21,26 @@
 		<article id="index" data-role="article" class="active">
 			<!--<p class="title">Metro风格</p>-->
 			<!--<ul class="grid metro" data-col="2">-->
+
+			<div class="scroller">
+
+				<div id="slide" data-role="slider" class="active" style="overflow: hidden; height:230px;">
+					<div class="scroller">
+						<div class="slide">
+							<img data-source="assets/app/img/1.jpg" style="width: 100%"/>
+							<div class="slider_label">综合新闻</div>
+						</div>
+						<div class="slide">
+							<img data-source="assets/app/img/3.jpg" style="width: 100%"/>
+							<div class="slider_label">综合新闻</div>
+						</div>
+						<div class="slide">
+							<img data-source="assets/app/img/1111.jpg" style="width: 100%"/>
+							<div class="slider_label">综合新闻</div>
+						</div>
+					</div>
+				</div>
+
 			<ul class="grid metro" data-col="2">
 
 				<li style="width:50%">
@@ -63,6 +83,8 @@
 			</ul>
 
 
+			</div>
+
 		</article>
 
 
@@ -89,6 +111,8 @@
 <!--- third -->
 <script src="assets/third/jquery/jquery-2.1.3.min.js"></script>
 <script src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
+<script src="assets/third/iscroll/iscroll-probe.js"></script>
+
 <!---  agile -->
 <script type="text/javascript" src="assets/agile/js/agile.js"></script>
 <script type="text/javascript" src="assets/bridge/exmobi.js"></script>
@@ -96,13 +120,33 @@
 <!-- app -->
 <script type="text/javascript" src="assets/app/js/app.seedsui.js"></script>
 
-
-
-
-
-
 <script>
 
+
+	$('#slide img').on(A.options.clickEvent, function(){
+		//var $el = $(this);
+		//A.showToast($el.siblings('.slider_label').html());
+		A.Component.pictureShow({
+			id : 'picture',
+			index : $("#slide .slide").index($("#slide .slide.active")),
+			title : '这是默认标题',
+			list : [
+				{
+					imgURL : 'assets/app/img/1.jpg',
+					content : '这是第一条新闻'
+				},
+				{
+					imgURL : 'assets/app/img/3.jpg',
+					content : '这是第二条新闻'
+				},
+				{
+					imgURL : 'assets/app/img/1111.jpg',
+					content : '这是第三条新闻'
+				}
+			]
+
+		});
+	});
 </script>
 </body>
 </html>
