@@ -34,8 +34,10 @@
 
             <br/>
 
-            <button class="submit block">
-                <a href="carInfo.html">登陆</a>
+            <button class="submit block" id="submit" type="submit">
+
+
+                <!--<a href="carInfo.html">登陆</a>-->
 
             </button>
         </form>
@@ -55,6 +57,53 @@
 <!-- app -->
 <script type="text/javascript" src="assets/app/js/app.seedsui.js"></script>
 <script>
+
+
+//    $(document).ready(function(){
+//        $("button").click(function(){
+//            window.location.href = "index.html?id=1";
+//        });
+//    });
+
+
+
+
+$(document).ready(function(){
+    $("form").submit(function(e){
+
+        //alert("登陆");
+
+        $.get("http://124.172.245.189:9888/estar-ui/ui/pages",
+
+                function(data,status){
+                    alert("数据：" + data + "\n状态：" + status);
+                });
+
+
+//               $util.ajax(
+//                {
+//                    url:'http://124.172.245.189:9888/estar-ui/ui/pages',
+//                    type:'get',
+//
+//                    data: {},
+//                   success:function(data){
+//
+//                       alert(data);
+//                   }
+//
+
+
+
+
+
+
+
+    });
+
+
+});
+
+
     $('a[data-href]').on(A.options.clickEvent, function(){
         var href = $(this).data('href');
         try{
@@ -67,10 +116,13 @@
 
     window.addEventListener("load",function(){
         var f=new Form("#form1");
+
+        var  a = new Alert();
+
         f.container.addEventListener("submit",function(e){
+
             e.preventDefault();
             f.validate();
-
 
         },false);
     },false);
