@@ -45,7 +45,8 @@ A.launch({
 	readyEvent: 'ready', //触发ready的事件，在ExMobi中为plusready
 	backEvent: 'backmonitor',
 	crossDomainHandler: function(opts) {
-		$util.server(opts);
+		//$util.server(opts);
+		$util.ajax(opts);
 	},
 	iScrollOptions : {
 		click : true

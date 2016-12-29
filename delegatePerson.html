@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>代理人</title>
+    <link rel="stylesheet" href="assets/agile/css/agile.layout.css">
+    <link rel="stylesheet" href="assets/third/seedsui/plugin/seedsui/seedsui.min.css">
+
+
+
+</head>
+<body>
+
+<div id="section_container">
+    <section id="login-section" data-role="section" class="active">
+        <header>
+            <div class="titlebar"><h1 style="text-align: center">代理人</h1>
+
+            </div>
+
+
+        </header>
+
+        <article id="main_article" data-role="article" class="active">
+
+            <div class="titlebar">
+                <div class="searchbar">
+                    <div class="input-box radius20" data-input="clear">
+                        <input type="search" placeholder="请输入搜索内容" class="search" />
+                        <i class="icon icon-clear-fill color-placeholder"></i>
+                    </div>
+                    <a id="search">搜索</a>
+                </div>
+            </div>
+
+
+
+
+            <ul class="list" id="list">
+
+                <li class="row">
+
+                    <div class="justify-content">
+                        <p style="float:left;">代理人姓名：</p>
+                        <p style="float: left;margin-left: 20px">小明</p>
+                        <br/>
+                        <p style="float:left;">代理人编码：</p>
+                        <p style="float:left;margin-left: 20px">9878999999</p>
+                    </div>
+
+                </li>
+                <li class="row">
+                    <div class="justify-content">
+                        <p style="float:left;">代理人姓名：</p>
+                        <p style="float: left;margin-left: 20px">小明</p>
+                        <br/>
+                        <p style="float:left;">代理人编码：</p>
+                        <p style="float:left;margin-left: 20px">9878999999</p>
+                    </div>
+
+                </li>
+
+            </ul>
+
+
+
+        </article>
+    </section>
+
+</div>
+
+
+<!--- third -->
+<script src="assets/third/jquery/jquery-2.1.3.min.js"></script>
+<script src="assets/third/jquery/jquery.mobile.custom.min.js"></script>
+<!---  agile -->
+<script type="text/javascript" src="assets/agile/js/agile.js"></script>
+<script type="text/javascript" src="assets/bridge/exmobi.js"></script>
+<script type="text/javascript" src="assets/bridge/agile.exmobi.js"></script>
+<!-- app -->
+<script type="text/javascript" src="assets/app/js/app.seedsui.js"></script>
+<script>
+
+
+    $(document).ready(function(){
+        $('li.row').click(function() {
+
+            var obj_lis = document.getElementById("list").getElementsByTagName("li");
+        alert("点击");
+        for(i=0;i<obj_lis.length;i++){
+            obj_lis[i].onclick = function(){
+                alert(this.innerHTML);
+            }
+        }
+    }
+
+
+    );
+
+    });
+
+    $(document).ready(function(){
+        $('a#search').click(function() {
+
+
+
+
+            A.showMask("",function(){
+
+            });
+
+
+
+            var data = JSON.stringify({
+                "head":{
+                    "function":"agent",
+                    "method":"getAgent",
+                    "userCode":"142505233",
+                    "appVersion":"",
+                    "clientSystemInfo":"iOS",
+                    "token ":""
+                },
+                "data":{
+                    "deptCode":"42990101",
+                    "type":"0",
+                    "agentCode":""
+                }
+            });
+
+            $.ajax({
+                type: 'post',
+                //url: 'http://hujl.vicp.cc:40090/zs_mobile/saleH5/mobileH5',
+                url: 'http://zxlptkf.vicp.cc:19816/zs_mobile/saleTest/mobileTest/',
+
+                data: data,
+                //contentType: "application/text; charset=utf-8",
+
+                beforeSend: function (XMLHttpRequest) {
+
+
+                },
+                success: function (data, textStatus) {
+
+                    alert(data);
+
+
+
+
+                    var obj = jQuery.parseJSON(data);
+                    if (obj.result.code == '0') {
+
+                        A.showToast(obj.result.message);
+                    } else {
+
+                        //alert(obj.result.message);
+                        A.hideMask();
+
+                        A.showToast(obj.result.message);
+
+                        $("#list").html("");
+
+                        for(var i=0;i<obj.data.agentList.length;i++){
+                            var agentName = obj.data.agentList[i].agentName;
+                            var agentCode = obj.data.agentList[i].agentCertificateNo;
+                            var str = '<li class="row"><div class="justify-content"><p style="float:left;">代理人姓名：</p> <p style="float: left;margin-left: 20px">'+agentName+'</p> <br/> <p style="float:left;">代理人编码：</p> <p style="float:left;margin-left: 20px">'+agentCode+'</p> </div> </li>';
+                            $("#list").append(str);
+
+
+                        }
+
+
+
+                    }
+                },
+                complete: function (XMLHttpRequest, textStatus) {
+
+
+                },
+                error: function () {
+                    A.showToast('请求失败');
+
+                    //alert("请求失败");
+                }
+            });
+
+
+
+
+
+
+
+        });
+
+    });
+
+
+
+
+    //$(document).ready(function() {
+    //    $("form1").submit(function (e) {
+    //
+    //        alert("登陆");
+    //
+    ////
+    //
+    //
+    //
+    //}
+
+
+    //    $('a[data-href]').on(A.options.clickEvent, function(){
+    //        var href = $(this).data('href');
+    //        try{
+    //            NativeUtil.browser(href);
+    //        }catch(e){
+    //            location.href = href;
+    //        }
+    //    });
+    //
+    //
+    //    window.addEventListener("load",function(){
+    //        var f=new Form("#form1");
+    //
+    //        var  a = new Alert();
+    //
+    //        f.container.addEventListener("submit",function(e){
+    //
+    //            e.preventDefault();
+    //            f.validate();
+    //
+    //        },false);
+    //    },false);
+
+
+
+</script>
+</body>
+</html>

@@ -26,8 +26,12 @@
                 <div class="group" >
                     <div class="row">
                         <label class="row-left">代理人</label>
-                        <div class="row-right input-box" data-input="clear">
-                            <input type="text" placeholder="代理人" name="username" data-rule-field="代理人" data-rule="username"/>
+                        <div class="row-right" data-input="clear" style="width: 60%">
+
+                            <button id="username" style="background-color: #0062cc height: 100% width: 200px"><a href="delegatePerson.html">代理人</a>
+                                <!--<input disabled="disabled" type="text" placeholder="代理人" name="username" data-rule-field="代理人" data-rule="username"/>-->
+                            </button>
+
                             <i class="icon icon-clear-fill color-placeholder"></i>
                         </div>
                     </div>
@@ -146,7 +150,7 @@
                 </div>
 
                 <button type="button" class="submit block" id="submit">
-                    <a style="width: 100%" data-toggle="html" href="insuranceCategery.html">下一步</a>
+                    <!--<a style="width: 100%" data-toggle="html" href="insuranceCategery.html">下一步</a>-->
                 </button>
 
             </form>
@@ -167,22 +171,92 @@
 <!-- app -->
 <script type="text/javascript" src="assets/app/js/app.seedsui.js"></script>
 <script type="text/javascript" src="assets/third/seedsui/plugin/seedsui/seedsui.min.js"></script>
-<!--<script>-->
+<script>
 
-<!--/* 暂时注释-->
-<!--window.addEventListener("load",function(){-->
+/* 暂时注释
+window.addEventListener("load",function(){
 
-<!--var f = new Form("#form1");-->
-<!--var a = new Alert();-->
-<!--$('#submit').on(A.options.clickEvent,function(){-->
-<!--var args=f.serialize();-->
-<!--a.setText("你所要提交的参数是："+args);-->
-<!--a.show();-->
-<!--});-->
+var f = new Form("#form1");
+var a = new Alert();
+$('#submit').on(A.options.clickEvent,function(){
+var args=f.serialize();
+a.setText("你所要提交的参数是："+args);
+a.show();
+});
 
-<!--},false);-->
-<!--*/-->
+},false);
+*/
 
-<!--</script>-->
+
+$(document).ready(function(){
+    $("button#username").click(function(){
+        alert("代理人");
+
+        var data = localStorage.getItem("login");
+
+        alert(data);
+        //location.href = "index.html";
+
+    })
+
+
+});
+
+
+//window.addEventListener("load",function(){
+//
+//    var f = new Form("#form1");
+//    var a = new Alert();
+//    $('#submit').on(A.options.clickEvent,function(){
+//
+//
+//        var str = location.href;
+//        str = decodeURI(str);
+//        alert(str);
+//        var strs = str.split("?");
+//        var strs2 = strs[1].split("#");
+//
+//
+//        var obj = jQuery.parseJSON(strs2[0]);
+//        alert(obj.result.message);
+//
+//
+////        var params = A.Component.params(str);//获取所有参数，此处为{'id':'1', 'title':'Agile框架实战'}
+////        alert(params.result.message);
+//
+//    });
+//
+//    $('button#username').on(A.options.clickEvent,function(){
+//
+//
+//        var str = location.href;
+//        str = decodeURI(str);
+//        alert(str);
+//        var strs = str.split("?");
+//        var strs2 = strs[1].split("#");
+//
+//
+//        var obj = jQuery.parseJSON(strs2[0]);
+////        alert(obj.result.message);
+//
+//
+//        location.href = "delegatePerson.html";
+//
+////        var params = A.Component.params(str);//获取所有参数，此处为{'id':'1', 'title':'Agile框架实战'}
+////        alert(params.result.message);
+//
+//    });
+//
+//
+//
+//
+//},false);
+
+
+
+
+
+
+</script>
 </body>
 </html>
