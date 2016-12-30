@@ -104,8 +104,14 @@
         $('a#search').click(function() {
 
 
+            //接收从一页传递的值
+            var data = localStorage.getItem("login");
 
+            var dataobj = jQuery.parseJSON(data);
+            alert(data);
 
+            var userCode = dataobj.data.userCode;
+            var deptCode = dataobj.data.deptCode;
             A.showMask("",function(){
 
             });
@@ -116,13 +122,13 @@
                 "head":{
                     "function":"agent",
                     "method":"getAgent",
-                    "userCode":"142505233",
+                    "userCode":userCode,
                     "appVersion":"",
                     "clientSystemInfo":"iOS",
                     "token ":""
                 },
                 "data":{
-                    "deptCode":"42990101",
+                    "deptCode":deptCode,
                     "type":"0",
                     "agentCode":""
                 }
